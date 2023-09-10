@@ -1,6 +1,6 @@
 # Employee Management Portal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+This project is Angular SPA to Register and Login for an Admin to manage CRUD operations using Mock APIs to manage Employee List.
 
 ## Run Json_Server to Mock API
 
