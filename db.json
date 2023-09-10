@@ -1,0 +1,48 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "name": "admin",
+      "password": "Admin@01",
+      "email": "abxfjfhn@hfhmjb.com",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "abhijeeth",
+      "name": "Abhijeeth",
+      "password": "Abhi@jeeth1",
+      "email": "abhijeeth@gmail.com",
+      "role": "user",
+      "isactive": false
+    },
+    {
+      "id": "abhishek",
+      "name": "Abhishek",
+      "password": "Abhi@shek1",
+      "email": "abhishek@gmail.com",
+      "role": "user",
+      "isactive": false
+    },
+    {
+      "id": "abhijeethrk",
+      "name": "Abhijeeth",
+      "password": "Abhi@jeeth01",
+      "email": "abhijeeth@gmail.com",
+      "role": "user",
+      "isactive": false
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "abhijeeth",
+      "email": "abhi@gmail.com"
+    },
+    {
+      "name": "V",
+      "email": "v@gmail.com",
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<form class="example-form" [formGroup]="adduserform" (ngSubmit)="saveUser()">
+    <mat-card>
+        <mat-card-header><h4>Add User</h4></mat-card-header>
+    <mat-card-content>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>UserId</mat-label>
+      <input matInput placeholder="UserId" formControlName="id" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name" >
+      </mat-form-field>
+      <mat-form-field class="example-full-width" *ngIf="!addMoney" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" formControlName="password" type="password">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" *ngIf="addMoney" appearance="fill">
+        <mat-label>Balance</mat-label>
+        <input matInput placeholder="Balance" formControlName="balance" type="number">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" *ngIf="addMoney" appearance="fill">
+        <mat-label>Credit</mat-label>
+        <input matInput placeholder="Credit" formControlName="credit" type="number">
+      </mat-form-field>
+</mat-card-content>
+    <mat-card-footer>
+    <div class="example-button-row" style="margin: 2px">
+        <button mat-raised-button color="primary" *ngIf="!addMoney">Save</button> <button mat-raised-button color="primary" *ngIf="addMoney">Add Money</button> | <a (click)="closepopup()" mat-raised-button color="accent">Close</a>
+    </div>
+</mat-card-footer>
+</mat-card>
+  </form>

@@ -1,21 +1,27 @@
-import { Component, DoCheck } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent implements DoCheck {
+export class HomeComponent {
+  user:any
+  title:any
   isadmin=false;
   isMenuVisible=false;
   isLoggedIn=false
-  constructor(private route:Router){
+  constructor(private authService:AuthService,private route:Router){
+    this.user=this.authService.getUserid();
+    this.title=this.authService.isAdmin()?"Employee Management Portal":"";
     let role=sessionStorage.getItem('role');
     if(role=='admin'){
       this.isadmin=true;
     }
   }
+ 
   ngDoCheck(): void {
     let currentroute = this.route.url;
     let role=sessionStorage.getItem('role');

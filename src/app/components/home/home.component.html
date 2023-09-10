@@ -1,0 +1,17 @@
+<div class="homescreen">
+  <div>
+    <h4>
+      <p>
+        Hello <b>{{ user | titlecase }}</b
+        >, Welcome to {{ title }}
+      </p>
+    </h4>
+  </div>
+</div>
+<mat-card *ngIf="isadmin" style="margin: 10px">
+  <mat-card-content>
+    <a style="text-decoration: none; color: black" routerLink="/item">
+      <span class="menuitem"> Employee List </span>
+    </a>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,13 @@
+.firstrow{
+    display: flex;
+    flex-direction: row;
+}
+
+.addbutton{
+position: inherit;
+width: 50%;
+}
+
+.searchbar{
+margin-left: auto;
+}
